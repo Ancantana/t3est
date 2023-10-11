@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Authentic Sans', sans-serif;
+      display: flex;
+      align-items: center;
+      height: 100vh;
+    }
+    #container {
+      display: flex;
+      width: 100%;
+    }
+    #video-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+    }
+    #write-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    canvas {
+      display: block;
+      max-width: 100%; /* Ensure the video feed doesn't exceed the container */
+      max-height: 100%;
+    }
+    textarea {
+      width: 100%; /* The text area takes up the full width of the right side */
+      height: 100vh; /* The text area takes up the full height of the right side */
+      border: none; /* Remove borders */
+      resize: none; /* Disable text area resizing */
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="video-container">
+      <video id="captureVideo" autoplay></video>
+    </div>
+    <div id="write-container">
+      <textarea id="textInput"></textarea>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script src="sketch.js"></script>
+</body>
+</html>
